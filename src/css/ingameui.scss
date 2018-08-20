@@ -1,0 +1,80 @@
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+/*
+    add icons here. are loaded seperatly. todo-> spritesheets
+*/
+.swarmFormation_circle{background-image:url(/../../ui/icon_circle.png);}
+.swarmFormation_random{background-image:url(/../../ui/icon_random.png);}
+
+.swarmBehaviour_seek_enemy{background-image:url(/../../ui/ant_soldier.png);}
+.swarmBehaviour_seek_food{background-image:url(/../../ui/ant_worker.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+
+/*----------------------------------------*/
+
+.page_wrapper {
+    width: 100%;
+    margin: 0 auto;
+ }
+ 
+ .content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#4b7cad, 0); /* zur visuellen Darstellung */
+    position: absolute;        /* (1.) */
+ }
+ 
+/*
+game canvas
+*/
+.game_canvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+button{
+    margin: 1em;
+    padding: .3em;
+}
+
+h1 {
+    color: white;
+}
+
+/*
+position und display
+sass
+bootstrap
+*/

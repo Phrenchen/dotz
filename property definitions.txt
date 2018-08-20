@@ -1,0 +1,34 @@
+swarm properties
+	- unit count
+	- behaviour
+
+
+unit properties
+	Unit
+		- hitpoints
+		- unit color
+	
+	SteeredVehicle
+		- maxForce
+		
+		
+		// wander
+		- wanderAngle
+		- wanderDistance
+		- wanderRadius
+		- wanderRange
+		
+		// avoid
+		- avoidDistance
+		- avoidBuffer
+		
+		// arrive
+		- arrivalThreshold
+		
+		// follow path (of waypoints)
+		- pathIndex
+		- pathThreshold
+		
+	Vehicle
+		- mass
+		- maxSpeed

@@ -1,0 +1,55 @@
+known issues:
+
+edgecase:
+
+- guard unit tries to approach positon on circle around food. canvas bounds makes it impossible for unit to reach the target position.
+    -> "soft fix": don´t position food close to the canvas bounds
+    -> TODO: check canvas bounds for circle targetPositions
+
+
+------
+setup project:
+git clone https://Phrenchen@bitbucket.org/Phrenchen/react_typescript_cannonfodder.git
+npm install
+
+compile:
+npm start (calling webpack)
+
+run:
+http-server -c-1 dist
+
+----------------------------------------------------------------------------
+
+important parts modified frequently...todo?
+- player color:
+    ingame_grid_ui.scss (CSS)
+    ColorConsts.ts (game package)
+
+- start point of app:
+    AppStatemachine
+
+- food config:
+    MapFactory.createDefaultMap
+
+- player swarm config:
+    SwarmFactory.initDefaultSetup
+
+- preselect player count:
+    reducer: players.defaultPlayerCount
+
+- toggle auto-creation of player swarms at level start:
+    Map.init calling onCreateSwarm for each player
+
+- set initial target for new player swarm?
+    Map.setTargetForSwarm
+
+----------------------------------------------------------------------------
+
+tech backlog:
+
+- clean up node_modules
+    - remove unused packages
+    - add to git ignore and remove from repo
+
+
+----------------------------------------------------------------------------

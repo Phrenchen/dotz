@@ -1,0 +1,253 @@
+/* VARIABLES */
+// change here -> update PlayerConsts.ts
+$color-player1: #CFBB20;
+$color-player2: #6b69f8;
+$color-player3: #9C7728;
+$color-player4: #7F98A8;
+
+$color-enemy:#FF0000;
+$color-food:#223b22;
+
+$color-header-background:rgba(126, 126, 126, .5);
+$color-topbar:rgba(126, 126, 126, .5);
+
+$color-content-background:rgba(126, 126, 126, 0);
+
+$color-button-left:rgba(196, 196, 196, 0.5);
+$color-button-right:rgba(97, 128, 94, 0.5);
+
+
+/* GRID */
+.grid_ingame_ui{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content auto min-content;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/************************************ ****************/
+/* grid areas / COMPONENTS */
+
+/* page elements */
+.header-ingame{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    background-color: $color-header-background;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.mainButtonBar{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+
+    display:grid;
+    grid-template-columns: min-content min-content min-content min-content ;
+    grid-template-rows: min-content;
+    justify-content: center;
+
+    
+    pointer-events: auto;
+    cursor: pointer;
+    color: white;
+}
+
+.ingamePlayerSelection{
+    grid-column: 4 / 5;
+    display:grid;
+    grid-auto-rows: 20% 20% 20% 20% ;
+    justify-content: right;
+    align-content: center;
+    
+    
+}
+
+.mainButton_about{
+    color: $color-button-left;
+    background-color: forestgreen;
+}
+
+/* content */
+.content-center{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-color: $color-content-background;
+    pointer-events: auto;
+    color: white;
+}
+
+.content-center-fullwidth{
+    grid-column: 1 / 5;
+    grid-row: 2 / 4;
+    background-color: $color-content-background;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    justify-self: center;
+    justify-items: center;
+    //align-self: stretch;
+    //align-items: center;
+    text-align: center;
+}
+
+// start menu
+.startmenu{
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+    
+    justify-self: center;
+    align-self: center;
+    pointer-events: auto;
+}
+
+/* topbars */
+// top right cell
+.topbar-small-right{
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    pointer-events: auto;
+    background-color: $color-topbar;
+    color: white;
+    text-align: center;
+}
+
+// cells 2-4
+.topbar-wide{
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    pointer-events: auto;
+    background-color: $color-topbar;
+    color: white;
+    text-align: center;
+}
+
+// 2 center cells
+.topbar-center{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    pointer-events: auto;
+    background-color: $color-topbar;
+    color: white;
+    text-align: center;
+}
+
+// cells 3-4
+.topbar-double-right{
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    pointer-events: auto;
+    background-color: $color-topbar;
+    color: white;
+    text-align: center;
+}
+
+// cells 3-4
+.topbar-single-next-to-header{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    pointer-events: auto;
+    background-color: $color-topbar;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+/* match UI */
+.grid_actionpanel{
+    display: grid;
+    grid-area: grid_actionpanel;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1em;
+
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    pointer-events: auto;
+    background-color: rgba(36, 36, 36, 0.8);
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-gameover-player-results{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:2em;
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-self: center;
+    align-self: center;
+}
+
+.grid_ingame_ui > div{
+    //padding: 1em;
+    padding: 0px;
+}
+.grid_actionpanel > div{
+    border:#333 1px solid;
+    padding: 1em;
+}
+
+.playerstats{
+    pointer-events: auto;
+    cursor: pointer;
+    color:black;
+    padding: 5px;
+    border: 5px;
+    margin: 0px;
+    min-width: 50px;
+    text-align: center;
+    text-justify: center;
+}
+
+.playerstats_1{
+    background-color: $color-player1;
+}
+
+.playerstats_2{
+    background-color: $color-player2;
+}
+
+.playerstats_3{
+    background-color: $color-player3;
+}
+
+.playerstats_4{
+    background-color: $color-player4;
+}
+
+
+
+
+.player_results {
+    font-size: small;
+}
+
+ .player_results_1{
+    color: $color_player1;
+}
+
+.player_results_2{
+    color:$color_player2;
+}
+
+.player_results_3{
+    color: $color_player3;
+}
+.player_results_4{
+    color:$color_player4;
+}
+
+
+/* winner */
+.player_results_winner {
+    font-size: larger;
+    font: italic bold;
+}
